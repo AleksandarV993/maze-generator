@@ -3,7 +3,7 @@
 
 // Set the target surface
 surface_set_target(drawingSurface);
-draw_clear_alpha(c_black, 1);
+draw_clear_alpha(global.selectedOptions.fMazeBgColor, 1);
 var _c;
 // Iterate through all entries and set the appropriate 'cell' color
 for(var _ix = 0; _ix < iMazeWidth; _ix++){
@@ -11,7 +11,10 @@ for(var _ix = 0; _ix < iMazeWidth; _ix++){
 		// Iterate through each pixel
 		for(var _px = 0; _px < iPathThickness; _px++){
 			for(var _py = 0; _py < iPathThickness; _py++){
-				_c = (dgMaze[# _ix, _iy] & CELL_VISITED) ? c_white : c_teal;
+				_c = (dgMaze[# _ix, _iy] & CELL_VISITED) ? 
+					global.selectedOptions.fMazeWallColor 
+					: 
+					global.selectedOptions.fMazeCellColor;
 				draw_point_color(_ix * (iPathThickness + 1) + _px, _iy * (iPathThickness + 1) + _py, _c);
 			}
 		}// End Pixel Draw
@@ -21,14 +24,14 @@ for(var _ix = 0; _ix < iMazeWidth; _ix++){
 				draw_point_color(
 					_ix * (iPathThickness + 1) + _p, 
 					_iy * (iPathThickness + 1) + iPathThickness, 
-					c_white
+					global.selectedOptions.fMazeWallColor
 				);
 			}
 			if(dgMaze[# _ix, _iy] & CELL_PATH_E){
 				draw_point_color(
 					_ix * (iPathThickness + 1) + iPathThickness,
 					_iy * (iPathThickness + 1) + _p,
-					c_white
+					global.selectedOptions.fMazeWallColor
 				);
 			}
 		}

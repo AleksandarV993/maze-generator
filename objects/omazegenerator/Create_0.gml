@@ -2,8 +2,8 @@
 
 randomize();
 
-iMazeWidth = 40;
-iMazeHeight = 25;
+iMazeWidth = global.selectedOptions.iMazeWidth;
+iMazeHeight = global.selectedOptions.iMazeHeight;
 iPathThickness = 3;
 // Creates a new ds_grid where all initial cells have the value of 0
 dgMaze = ds_grid_create(iMazeWidth, iMazeHeight);

@@ -1,8 +1,10 @@
 {
   "resources": [
+    {"id":{"name":"oWelcome","path":"objects/oWelcome/oWelcome.yy",},"order":1,},
     {"id":{"name":"Pair","path":"scripts/Pair/Pair.yy",},"order":0,},
+    {"id":{"name":"rWelcome","path":"rooms/rWelcome/rWelcome.yy",},"order":1,},
     {"id":{"name":"oMazeGenerator","path":"objects/oMazeGenerator/oMazeGenerator.yy",},"order":0,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rMaze","path":"rooms/rMaze/rMaze.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -18,7 +20,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rWelcome","path":"rooms/rWelcome/rWelcome.yy",},},
+    {"roomId":{"name":"rMaze","path":"rooms/rMaze/rMaze.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
